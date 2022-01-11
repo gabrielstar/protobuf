@@ -3,3 +3,4 @@ python-keycloak
 pytest
 flask
 flask_oidc
+faker
