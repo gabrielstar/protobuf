@@ -58,7 +58,7 @@ def hello_me():
             'access_token=<%s>' % access_token
             headers = {'Authorization': 'Bearer %s' % (access_token)}
             # YOLO
-            greeting = requests.get('http://localhost:5000/greeting', headers=headers).text
+            greeting = requests.get('http://localhost:5000/api', headers=headers).text
         except:
             print
             "Could not access greeting-service"
