@@ -27,7 +27,7 @@ def user():
 @pytest.fixture(scope='session')
 def keycloak_config():
     return helpers.KeycloakConfig(os.environ.get('KEYCLOAK_URL'), os.environ.get("keycloak_client_id"),
-                          os.environ.get('keycloak_realm_name'))
+                          os.environ.get('keycloak_realm_name'), os.environ.get("keycloak_client_secret"))
 
 
 @pytest.fixture(scope='session')
@@ -36,7 +36,8 @@ def keycloak_client(keycloak_config) -> KeycloakOpenID:
 
     keycloak_openid = KeycloakOpenID(server_url=keycloak_config.url,
                                      client_id=keycloak_config.client_id,
-                                     realm_name=keycloak_config.realm_name)
+                                     realm_name=keycloak_config.realm_name,
+                                     client_secret_key=keycloak_config.client_secret)
     yield keycloak_openid
 
     logging.info("\nDestroying Keycloak client")

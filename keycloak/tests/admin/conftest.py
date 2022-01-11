@@ -15,7 +15,7 @@ def admin():
 @pytest.fixture(scope='session')
 def keycloak_admin_config():
     return helpers.KeycloakConfig(os.environ.get('KEYCLOAK_URL'), os.environ.get("admin_client_id"),
-                          os.environ.get('admin_realm_name'))
+                          os.environ.get('admin_realm_name'),"")
 
 
 @pytest.fixture(scope='session')

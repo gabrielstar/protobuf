@@ -1,3 +1,5 @@
 protobuf
 python-keycloak
 pytest
+flask
+flask_oidc
