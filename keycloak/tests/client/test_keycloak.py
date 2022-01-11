@@ -8,7 +8,7 @@ def test_config_well_know(keycloak_client):
     assert config_well_know is not None
 
 
-def test_token_creation(keycloak_client, user):
+def test_token_creation(keycloak_client, user, ctx):
     """
     GIVEN client and user credentials
     WHEN token is created
@@ -21,3 +21,4 @@ def test_token_creation(keycloak_client, user):
     token = keycloak_client.token(*user, totp="012345")
     token = keycloak_client.refresh_token(token['refresh_token'])
     assert token['access_token']
+    ctx.token = token['access_token']

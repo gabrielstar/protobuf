@@ -1,23 +1,32 @@
 import logging
 import os
+import types
 from collections import namedtuple
 
 import pytest
 from keycloak import KeycloakOpenID
+from .. import helpers
 
-logging.basicConfig(level=logging.INFO)
-User = namedtuple("User", ["user", "password"])
-KeycloakConfig = namedtuple("KeycloakConfig", ["url", "client_id", "realm_name"])
+@pytest.fixture(scope='session')
+def ctx():
+    """
+    We can for instance store tokens and revoke them at the end of test
+    :return:
+    """
+    _ctx = types.SimpleNamespace()
+    yield _ctx
+    print(f"Context final state {_ctx}")
+    print("Revoking any used tokens ...")
 
 
 @pytest.fixture(scope='session')
 def user():
-    return User(os.environ.get('user'), os.environ.get('password'))
+    return helpers.User(os.environ.get('user'), os.environ.get('password'))
 
 
 @pytest.fixture(scope='session')
 def keycloak_config():
-    return KeycloakConfig(os.environ.get('KEYCLOAK_URL'), os.environ.get("keycloak_client_id"),
+    return helpers.KeycloakConfig(os.environ.get('KEYCLOAK_URL'), os.environ.get("keycloak_client_id"),
                           os.environ.get('keycloak_realm_name'))
 
 
