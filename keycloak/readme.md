@@ -1,0 +1,1 @@
+Spin up your own keycloak from docker container for test
