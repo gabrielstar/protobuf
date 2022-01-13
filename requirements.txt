@@ -4,3 +4,4 @@ pytest
 flask
 flask_oidc
 faker
+pandas

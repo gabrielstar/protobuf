@@ -28,7 +28,7 @@ class Feature:
         :return:
         """
         print(f"Intecepted with  __getattr__ on missing attribute: {item}")
-        print(f"Adding attribute")
+        print(f"Adding attribute and initialize with an empty list []")
         super().__setattr__(item, [])
 
 

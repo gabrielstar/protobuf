@@ -31,7 +31,7 @@ class AbstractPlayer(ABC):
 
 
 @dataclasses.dataclass
-class Player:
+class Player(AbstractPlayer):
     number: int
 
     def present(self):
