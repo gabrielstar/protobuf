@@ -22,11 +22,11 @@ with open(file_name, 'r') as file:
 def results_generator(results_num: int):
     for _ in range(results_num):
         yield {
-            'MatchResult': 1,
+            'MatchResult': random.randint(0, 2),
             'Last3MatchesPoints': random.randint(1, 3),
             'TablePosition': random.randint(1, 18),
-            'OpponentLast3MatchesPoints': 3,
-            'OpponentTablePosition': 9
+            'OpponentLast3MatchesPoints': random.randint(0,3),
+            'OpponentTablePosition': random.randint(1, 18)
         }
 
 
@@ -35,7 +35,7 @@ columns = ['MatchResult', 'Last3MatchesPoints', 'TablePosition', 'OpponentLast3M
 # write to
 with open(file_name, 'a', newline='', encoding='utf-8') as file:
     field_names = columns
-    results_num = 3
+    results_num = 300
     results = results_generator(results_num)
     writer = csv.DictWriter(file, field_names)
     for _ in range(results_num):
