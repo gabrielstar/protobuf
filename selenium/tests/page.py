@@ -4,7 +4,7 @@ from locator import MainPageLocators
 from element import SearchTextElement, GoButtonElement
 
 
-class BasePage(object):
+class BasePage():
     def __init__(self, driver: webdriver):
         self.driver: webdriver = driver
 
