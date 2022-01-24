@@ -1,8 +1,7 @@
-import types
-from typing import NamedTuple
-
-import pytest
 import logging
+import types
+from pathlib import Path
+import pytest
 from selenium import webdriver
 
 logging.basicConfig(level=logging.INFO)
@@ -18,17 +17,17 @@ def settings():
 
 @pytest.fixture(scope='session')
 def base_url():
-    # return "https://techwithtim.net"
-    return "https://orteil.dashnet.org/cookieclicker"
+    return "https://python.org"
 
 
 @pytest.fixture(scope='session')
 def driver_path():
-    return "/Users/gs/PycharmProjects/protobuf/selenium/driver/chromedriver"
+    return Path().resolve().parent.joinpath("driver/chromedriver")
 
 
 @pytest.fixture(scope='session')
-def driver(driver_path):
+def driver(driver_path, base_url):
     driver = webdriver.Chrome(driver_path)
+    driver.get(base_url)
     yield driver
     driver.quit()

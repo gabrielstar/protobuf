@@ -46,6 +46,7 @@ def test_navigation_back_forth(driver, base_url, settings):
     driver.back()
     driver.forward()
 
+
 @pytest.mark.skip("simple example")
 def test_action_chains(driver, base_url, settings):
     driver.get(base_url)
@@ -62,7 +63,7 @@ def test_action_chains(driver, base_url, settings):
         for item in items:
             value = int(item.text)
             if value <= count:
-                upgrade_actions =  ActionChains(driver)
+                upgrade_actions = ActionChains(driver)
                 upgrade_actions.move_to_element(items)
                 upgrade_actions.click()
                 upgrade_actions.perform()
