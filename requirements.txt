@@ -1,9 +1,12 @@
 protobuf
 python-keycloak
 pytest
+pytest-xdist
 flask
 flask_oidc
 faker
 pandas
 asyncio
 selenium
+playwright
+pytest-playwright

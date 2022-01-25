@@ -3,6 +3,8 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/pandas" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/playwright_tests/pages" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/playwright_tests/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.8 (protobuf)" jdkType="Python SDK" />

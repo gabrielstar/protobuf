@@ -1,0 +1,1 @@
+python -m pytest --headed --slowmo 1000 --browser webkit  --device 'iPhone 11' --verbose --screenshot on --video on -n 4
