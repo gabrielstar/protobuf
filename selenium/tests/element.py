@@ -25,6 +25,5 @@ class BasePageElement():
 class SearchTextElement(BasePageElement):
     locator = (By.NAME, "q")
 
-
 class GoButtonElement(BasePageElement):
     locator = (By.NAME, "go")
