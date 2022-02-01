@@ -1,7 +1,7 @@
 import time
 
 
-def test(kubernetes_test_client):
+def test_replicas_present(kubernetes_test_client):
     _, client = kubernetes_test_client
     deployments_list = client.list_deployment_for_all_namespaces()
 
