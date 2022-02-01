@@ -11,3 +11,4 @@ selenium
 playwright
 pytest-playwright
 locust
+kubernetes==20.13.0
