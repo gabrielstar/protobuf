@@ -3,3 +3,4 @@
 !**/helmify/**/*.sh
 **/test-results
 mlops_tests
+**/venv
