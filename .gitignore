@@ -4,3 +4,6 @@
 **/test-results
 mlops_tests
 **/venv
+**/reports
+**/<TemporaryDirectory '
+**/.pytest_cache
