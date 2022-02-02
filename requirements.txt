@@ -1,6 +1,7 @@
 protobuf
 python-keycloak
 pytest
+pytest-bdd==4.1.0
 pytest-xdist
 flask
 flask_oidc

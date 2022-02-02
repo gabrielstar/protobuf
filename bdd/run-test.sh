@@ -1,0 +1,1 @@
+make test-e2e-local-bdd APP_INSTANCE_URL=http://localhost:10101/ HAC_USERNAME=h2oai-tester HAC_PASSWORD=tester

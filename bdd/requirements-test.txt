@@ -1,0 +1,10 @@
+mock==4.0.3
+http://h2o-public-test-data.s3.amazonaws.com/e2e-testing/hac_playwright-1.14.1-py3-none-any.whl
+playwright==1.14.1
+pytest-asyncio==0.14.0
+pytest-bdd==4.1.0
+pytest-cov==2.11.1
+pytest-mock==3.5.1
+pytest-playwright==0.2.0
+pytest-pythonpath==0.7.3
+pytest==6.2.2

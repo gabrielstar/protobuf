@@ -1,0 +1,8 @@
+datatable==0.11.0
+h2o_wave==0.19.0
+markdown2==2.4.0
+numpy==1.19.1
+pandas==1.1.0
+tqdm==4.60.0
+pytz==2021.1
+https://s3.amazonaws.com/artifacts.h2o.ai/snapshots/ai/h2o/mlops_client/0.40.1-SNAPSHOT/h2o_mlops_client-0.40.1_SNAPSHOT_6e308fc.PR67.14-py2.py3-none-any.whl
