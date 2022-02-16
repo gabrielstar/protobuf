@@ -7,3 +7,4 @@ mlops_tests
 **/reports
 **/<TemporaryDirectory '
 **/.pytest_cache
+deployments

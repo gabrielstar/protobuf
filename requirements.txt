@@ -1,3 +1,5 @@
+https://h2o-public-test-data.s3.amazonaws.com/e2e-testing/h2oai_client/h2oai_client-1.10.0-py3-none-any.whl
+https://s3.amazonaws.com/artifacts.h2o.ai/snapshots/ai/h2o/mlops_client/0.53.0-SNAPSHOT/h2o_mlops_client-0.53.0_SNAPSHOT_345320a.PR88.3-py2.py3-none-any.whl
 protobuf
 python-keycloak
 pytest

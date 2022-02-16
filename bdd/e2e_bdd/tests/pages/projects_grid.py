@@ -14,8 +14,8 @@ class ProjectsGridPage(BasePage):
 
     def __init__(self, page: Page, logger: logging.Logger) -> None:
         super().__init__(page, logger)
-        self.menu_project_controls = MenuProjectControls(page)
-        self.menu_project_sidebar = MenuProjectSidebar(page)
+        self.menu_project_controls = MenuProjectControls(page, logger)
+        self.menu_project_sidebar = MenuProjectSidebar(page, logger)
 
     def click_projects_controls(self):
         self.menu_project_controls.click_all_controls()

@@ -19,6 +19,7 @@ def projects_grid_page(page: Page, logger: Logger) -> ProjectsGridPage:
     return ProjectsGridPage(page, logger)
 
 
+# shared BDD steps
 @given("Login page is displayed")
 def login_page_is_displayed(login_page):
     login_page.navigate()
